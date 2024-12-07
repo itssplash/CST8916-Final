@@ -50,9 +50,9 @@ SELECT
     price.value AS price,
     price.currency AS currency
 INTO
-    stockOutput
+    stockcontainer
 FROM
-    stockInput
+    stocksdata
 WHERE
     price.value > 30
 ```
