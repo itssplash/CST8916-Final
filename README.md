@@ -57,11 +57,24 @@ WHERE
     price.value > 30
 ```
 
+## Updated Stream Analytics Query for next question
+```
+SELECT
+    symbol AS Symbol,
+    price.value AS Price,
+    high - low AS TradeRange,
+    volume AS Volume,
+    market_Cap.value AS MarketCapValue,
+    EventEnqueuedUtcTime AS EventTime
+INTO
+    stockcontainer
+FROM
+    stocksdata
+WHERE
+    price.value > 20
+```
 
-Here’s the content reformatted correctly in Markdown (.md) format:
 
-markdown
-Copy code
 # Real-Time Stock Data Processing with Azure Event Hubs and Stream Analytics
 
 This project demonstrates the creation of a real-time streaming data pipeline using Azure Event Hubs and Stream Analytics. The pipeline filters stock data with prices over $30 and stores the results in Azure Blob Storage.
@@ -157,6 +170,16 @@ WHERE
 ![image](https://github.com/user-attachments/assets/fb014d37-022a-4505-844c-7252e6d306af)
 ## JSON FILE
 ![image](https://github.com/user-attachments/assets/c12014ef-de16-4f67-a9af-7dc1292c7490)
+
+
+
+## Screenshots of Question 9
+![image](https://github.com/user-attachments/assets/08b32000-9fab-4616-97b0-031c227ea650)
+
+![image](https://github.com/user-attachments/assets/ba54f679-6644-4199-924b-e893a6e044b6)
+![image](https://github.com/user-attachments/assets/3b4cd052-3fbf-4eb1-b74d-ca7d6bccbe1b)
+
+![image](https://github.com/user-attachments/assets/90465dd2-540b-4b37-a4cc-6c3015f811de)
 
 ## As you can see the results showing the rows where price > 30 only
 ![image](https://github.com/user-attachments/assets/bfc04e2f-0a22-496e-8063-022883b83cbb)
