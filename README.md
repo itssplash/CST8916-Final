@@ -75,12 +75,6 @@ WHERE
 ```
 
 
-# Real-Time Stock Data Processing with Azure Event Hubs and Stream Analytics
-
-This project demonstrates the creation of a real-time streaming data pipeline using Azure Event Hubs and Stream Analytics. The pipeline filters stock data with prices over $30 and stores the results in Azure Blob Storage.
-
----
-
 ## Verification
 ### Event Hub Configuration
 - Successfully created the Event Hub named stockdata.
